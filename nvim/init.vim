@@ -123,6 +123,7 @@ Plug 'Shougo/unite.vim'
 Plug 'reedes/vim-pencil'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
+Plug 'airblade/vim-rooter'
 call plug#end()
 
 " Set color scheme seoul256
@@ -146,7 +147,6 @@ let g:pencil#textwidth = 80
 let r_syntax_folding = 1
 let R_min_editor_width = 66
 let R_rconsole_width = 66
-let R_nvim_wd = -1
 let rout_follow_colorscheme = 1
 let R_notmuxconf = 1
 vmap <Space> <Plug>REDSendSelection

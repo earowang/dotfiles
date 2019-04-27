@@ -79,8 +79,8 @@ snippet [^:*
 #
 
 # library()
-snippet req
-	require(${1:}, quietly = TRUE)
+snippet li
+	library(${1:})
 # If Condition
 snippet if
 	if ( ${1:condition} )
@@ -187,11 +187,11 @@ snippet #---
 # >>>>
 
 snippet r
-	\`\`\`{r ${1:chung_tag}, echo = FALSE ${2:options}}
+	\`\`\`{r ${1:chung_tag}, ${2:options}}
 	${3:}
 	\`\`\`
 snippet ri
-	\`{r ${1:}}\`
+	\`r ${1:}\`
 
 snippet copt
 	\`\`\` {r setup, echo = FALSE}
@@ -200,6 +200,25 @@ snippet copt
 		#opts_knit$set(upload.fun = imgur_upload) # upload images
 	\`\`\`
 
+snippet lc
+	.left-column[
+	${1:}
+	]
+
+snippet rc
+	.right-column[
+	${1:}
+	]
+
+snippet pl
+	.pull-left[
+	${1:}
+	]
+
+snippet pr
+	.pull-right[
+	${1:}
+	]
 	
 # End of File ===================================================================
 # vim: set noexpandtab:

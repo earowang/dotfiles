@@ -130,6 +130,7 @@ Plug 'wesQ3/vim-windowswap'
 Plug 'mattn/emmet-vim'
 Plug 'connorholyday/vim-snazzy'
 Plug 'tpope/vim-dispatch'
+Plug 'reedes/vim-lexical'
 call plug#end()
 
 " Set color scheme seoul256
@@ -236,3 +237,12 @@ nnoremap <C-t> :VimFiler<cr>
 " vimshell
 nnoremap <C-s> :VimShell<cr>
 let g:vimshell_prompt = "ilovevim➤ "
+
+" spellchecker
+augroup lexical
+  autocmd!
+  autocmd FileType markdown,mkd call lexical#init()
+  autocmd FileType text call lexical#init()
+augroup END
+let g:lexical#thesaurus = ['~/.config/nvim/dict/words.txt',]
+let g:lexical#spelllang = ['en_us','en_au','en_gb']

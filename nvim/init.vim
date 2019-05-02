@@ -131,6 +131,7 @@ Plug 'mattn/emmet-vim'
 Plug 'connorholyday/vim-snazzy'
 Plug 'tpope/vim-dispatch'
 Plug 'reedes/vim-lexical'
+Plug 'universal-ctags/ctags'
 call plug#end()
 
 " Set color scheme seoul256
@@ -246,3 +247,12 @@ augroup lexical
 augroup END
 let g:lexical#thesaurus = ['~/.config/nvim/dict/words.txt',]
 let g:lexical#spelllang = ['en_us','en_au','en_gb']
+
+let g:tagbar_type_r = {
+    \ 'ctagstype' : 'r',
+    \ 'kinds'     : [
+        \ 'f:Functions',
+        \ 'g:GlobalVariables',
+        \ 'v:FunctionVariables',
+    \ ]
+\ }

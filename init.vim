@@ -230,7 +230,7 @@ nnoremap <space>s :Unite -quick-match buffer<cr>
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#custom#source('file_rec/async,file,buffer,grep', 'ignore_pattern', '\docs/\|\cache/\|\.DS_Store\|\.git/\|\.Rproj\.user/')
+call unite#custom#source('file_rec/async,file_mru,file,buffer,grep', 'ignore_pattern', 'docs/\|cache/\|\.DS_Store\|\.git/\|\.Rproj\.user/\|man/\|renv/\|figure/')
 
 " vimfiler
 let g:vimfiler_as_default_explorer = 1

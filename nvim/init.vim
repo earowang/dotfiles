@@ -31,6 +31,11 @@ Plug 'jalvesaq/Nvim-R'
 	let R_args = []  " if you had set any
 	let R_bracketed_paste = 1
 
+Plug 'autozimu/LanguageClient-neovim', {
+	\ 'branch': 'next',
+	\ 'do': 'bash install.sh',
+	\ }
+
 Plug 'SirVer/ultisnips'
 	" Configure ultisnips
 	let g:UltiSnipsUsePythonVersion = 3
@@ -90,7 +95,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 	let g:fzf_layout = { 'up': '~30%' }
 	nnoremap <C-p> :Files<cr>
-	nnoremap <C-b> :Buffers<cr>
+	nnoremap <space>s :Buffers<cr>
 
 Plug 'jceb/vim-orgmode'
 Plug 'chrisbra/csv.vim'

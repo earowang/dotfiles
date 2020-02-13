@@ -114,3 +114,5 @@ stt_tab   () { setTerminalText 1 $@; }
 stt_title () { setTerminalText 2 $@; }
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

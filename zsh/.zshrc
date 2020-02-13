@@ -113,6 +113,7 @@ stt_both  () { setTerminalText 0 $@; }
 stt_tab   () { setTerminalText 1 $@; }
 stt_title () { setTerminalText 2 $@; }
 
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+autoload -U promptinit; promptinit
+prompt pure

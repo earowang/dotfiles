@@ -5,8 +5,8 @@ Plug 'jalvesaq/Nvim-R'
 	" set r folding
 	let r_syntax_folding = 1
 	let R_min_editor_width = 66
-	let R_rconsole_width = 66
-	let R_objbr_w = 66
+	let R_rconsole_width = 78
+	let R_objbr_w = 78
 	let R_objbr_place = "BOTTOM"
 	let rout_follow_colorscheme = 1
 	let R_nvim_wd = -1
@@ -136,7 +136,6 @@ set ruler
 set mouse=a		" Enable mouse usage (all modes)
 set foldmethod=syntax
 set relativenumber number
-set wrap linebreak columns=80
 filetype on
 
 " set saved folding
@@ -170,7 +169,12 @@ else
 endif
 
 " key binding for make
-setlocal makeprg=make\ file=%:r
-nnoremap <F2> :Make<CR>
+" setlocal makeprg=make\ file=%:r
+" nnoremap <F2> :Make<CR>
+
+" key binding for rmarkdown
+autocmd FileType rmd    nnoremap <F2> :!Rscript -e 'Sys.setenv("RSTUDIO_PANDOC" = "/Applications/RStudio.app/Contents/MacOS/pandoc"); rmarkdown::render("%")'<CR>
+autocmd FileType rmd    nnoremap <buffer><silent><leader>o :!open %:r.pdf<CR>
+autocmd FileType rmd    nnoremap <buffer><silent><leader>v :!open %:r.html<CR>
 
 colorscheme snazzy

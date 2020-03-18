@@ -65,7 +65,7 @@ Plug 'dhruvasagar/vim-table-mode'
 	let g:table_mode_corner="|"
 
 Plug 'airblade/vim-rooter'
-	let g:rooter_patterns = ['Makefile', '*.Rproj', '.git/']
+	let g:rooter_patterns = ['*.Rproj', 'README.*']
 
 Plug 'mattn/emmet-vim'
 Plug 'connorholyday/vim-snazzy'

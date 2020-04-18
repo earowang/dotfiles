@@ -106,7 +106,7 @@ Plug 'universal-ctags/ctags'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 	let g:fzf_layout = { 'up': '~30%' }
-	nnoremap <C-p> :Files<cr>
+	nnoremap <C-p> :GFiles<cr>
 	nnoremap <space>s :Buffers<cr>
 
 Plug 'jceb/vim-orgmode'

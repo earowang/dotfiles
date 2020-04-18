@@ -5,7 +5,7 @@ Plug 'jalvesaq/Nvim-R'
 	" set r folding
 	let r_syntax_folding = 1
 	let R_min_editor_width = 66
-	let R_rconsole_width = 78
+	let R_rconsole_width = 66
 	let R_objbr_w = 78
 	let R_objbr_place = "BOTTOM"
 	let rout_follow_colorscheme = 1
@@ -30,6 +30,18 @@ Plug 'jalvesaq/Nvim-R'
 	let R_hl_term = 0
 	let R_args = []  " if you had set any
 	let R_bracketed_paste = 1
+
+Plug 'HerringtonDarkholme/yats.vim'
+" set filetypes as typescript.tsx
+	autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+	autocmd BufNewFile,BufRead *.ts set filetype=typescript
+
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	let g:deoplete#enable_at_startup = 1
+
+Plug 'Shougo/denite.nvim'
 
 Plug 'autozimu/LanguageClient-neovim', {
 	\ 'branch': 'next',

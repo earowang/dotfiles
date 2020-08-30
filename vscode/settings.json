@@ -1,0 +1,37 @@
+{
+  // Controls the font size in pixels.
+  "editor.fontSize": 16,
+  "window.zoomLevel": 1,
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.tabSize": 2,
+  "editor.lineNumbers": "relative",
+  "editor.tabCompletion": "on",
+  "editor.rulers": [80],
+  "css.lint.emptyRules": "ignore",
+  "css.lint.argumentsInColorFunction": "ignore",
+  "css.lint.propertyIgnoredDueToDisplay": "ignore",
+  "css.lint.unknownProperties": "ignore",
+  "css.lint.unknownAtRules": "ignore",
+  "references.preferredLocation": "view",
+  "workbench.colorTheme": "Dracula Pure",
+  "workbench.panel.defaultLocation": "right",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.scrollback": 10000,
+  "git.path": "/usr/local/bin/git",
+  "files.associations": {
+    "*.rmd": "markdown"
+  },
+  "r.lsp.diagnostics": false,
+  "explorer.confirmDelete": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "r.bracketedPaste": true,
+  "r.rterm.mac": "/usr/local/bin/radian",
+  "r.alwaysUseActiveTerminal": true,
+  "r.sessionWatcher": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.startupEditor": "newUntitledFile"
+}

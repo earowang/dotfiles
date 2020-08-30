@@ -1,0 +1,19 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "alt+-",
+    "command": "type",
+    "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+    "args": {
+      "text": " <- "
+    }
+  },
+  {
+    "key": "ctrl+shift+m",
+    "command": "type",
+    "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+    "args": {
+      "text": " %>% "
+    }
+  },
+]

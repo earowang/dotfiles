@@ -1,6 +1,6 @@
 " vim-plug manages Vim plugin
 call plug#begin()
-Plug 'jalvesaq/Nvim-R'
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 	" R plugin split window horizontally
 	" set r folding
 	let r_syntax_folding = 1
@@ -20,10 +20,10 @@ Plug 'jalvesaq/Nvim-R'
 	nmap <Space> <Plug>RDSendLine
 	autocmd FileType r inoremap <buffer> \\ <Esc>:normal! a %>%<CR>a 
 	autocmd FileType rmd inoremap <buffer> \\ <Esc>:normal! a %>%<CR>a 
-	map <silent> <LocalLeader>t :call RAction("tail")<CR>
-	map <silent> <LocalLeader>h :call RAction("head")<CR>
-	map <silent> <LocalLeader>la :call g:SendCmdToR("devtools::load_all('.')")<CR>
-	map <silent> <LocalLeader>dt :call g:SendCmdToR("devtools::test()")<CR>
+	nmap <silent> <LocalLeader>t :call RAction("tail")<CR>
+	nmap <silent> <LocalLeader>h :call RAction("head")<CR>
+	nmap <silent> <LocalLeader>la :call g:SendCmdToR("devtools::load_all('.')")<CR>
+	nmap <silent> <LocalLeader>dt :call g:SendCmdToR("devtools::test()")<CR>
 
 	let R_app = "radian"
 	let R_cmd = "R"
@@ -31,22 +31,22 @@ Plug 'jalvesaq/Nvim-R'
 	let R_args = []  " if you had set any
 	let R_bracketed_paste = 1
 
-Plug 'HerringtonDarkholme/yats.vim'
-" set filetypes as typescript.tsx
-	autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
-	autocmd BufNewFile,BufRead *.ts set filetype=typescript
+" Plug 'HerringtonDarkholme/yats.vim'
+" " set filetypes as typescript.tsx
+" 	autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+" 	autocmd BufNewFile,BufRead *.ts set filetype=typescript
 
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	let g:deoplete#enable_at_startup = 1
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"	let g:deoplete#enable_at_startup = 1
 
-Plug 'Shougo/denite.nvim'
+" Plug 'Shougo/denite.nvim'
 
-Plug 'autozimu/LanguageClient-neovim', {
-	\ 'branch': 'next',
-	\ 'do': 'bash install.sh',
-	\ }
+" Plug 'autozimu/LanguageClient-neovim', {
+"	\ 'branch': 'next',
+"	\ 'do': 'bash install.sh',
+"	\ }
 
 Plug 'SirVer/ultisnips'
 	" Configure ultisnips
@@ -57,8 +57,6 @@ Plug 'SirVer/ultisnips'
 	let g:UltiSnipsEnableSnipMate = 1
 
 Plug 'easymotion/vim-easymotion'
-	" Change the default leader in EasyMotion
-	let g:EasyMotion_leader_key = '<Leader>'
 
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
@@ -87,7 +85,7 @@ Plug 'reedes/vim-lexical'
 	" spellchecker
 	augroup lexical
 		autocmd!
-		autocmd FileType markdown,mkd call lexical#init()
+		autocmd FileType markdown,md,rmd call lexical#init()
 		autocmd FileType text call lexical#init()
 	augroup END
 	let g:lexical#thesaurus = ['~/.config/nvim/dict/words.txt',]

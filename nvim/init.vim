@@ -109,7 +109,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'jceb/vim-orgmode'
 Plug 'chrisbra/csv.vim'
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
 call plug#end()
 
 " This line should not be removed as it ensures that various options are
